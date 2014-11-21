@@ -10,7 +10,7 @@ sub foo {
 
 get '/' => sub {
   my $self = shift;
-  $self->render(template => 'index', title => 'Howdy');
+  $self->render(template => 'index', foo => 'Howdy');
 };
 
 app->start;
@@ -24,6 +24,11 @@ Welcome to the Mojolicious real-time web framework!
 @@ layouts/default.html.ep
 <!DOCTYPE html>
 <html>
-  <head><title><%= title %></title></head>
-  <body><%= content %></body>
+<head>
+	<title><%= title %></title>
+</head>
+<body>
+<%= content %>
+<%= foo %>
+</body>
 </html>
