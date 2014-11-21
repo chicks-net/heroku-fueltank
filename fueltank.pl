@@ -1,9 +1,16 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
 
+sub foo {
+	my ($inches) = @_;
+	die "no inches" unless defined $inches;
+	my $return = "$inches inches";
+	return $return;
+}
+
 get '/' => sub {
   my $self = shift;
-  $self->render('index');
+  $self->render(template => 'index', title => 'Howdy');
 };
 
 app->start;
