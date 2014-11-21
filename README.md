@@ -1,16 +1,17 @@
 Heroku Fueltank
 ===============
 
-Heroku app to try [Mojolicious](http://mojolicio.us/) that takes fuel tank levels and guesses how long you will still have heat.
+Heroku app to try [Mojolicious](http://mojolicio.us/) that takes fuel tank levels
+and guesses how long you will still have heat.
 
-It is easy to figure out the filled volume of a cylinder on its end, but it is not easy to do with a
-cylinder on its side as is typical with most fuel tanks:
+It is easy to figure out the filled volume of a cylinder on its end, but it is
+not easy to do with a cylinder on its side as is typical with most fuel tanks:
 
 ![fueld tank](http://mangastart.com/blog/wp-content/uploads/cylinder2.jpg)
 
-Our fuel tank is 42" in diameter and 46" long, so a bit of googling and playing with a spreadsheet
-I had a conversion chart for inches of of depth from the bottom into gallons of fuel that
-should represent:
+Our fuel tank is 42" in diameter and 46" long, so after a bit of googling and
+playing with a spreadsheet I had a conversion chart for inches of depth from the
+bottom into gallons of fuel that should represent:
 
 | Height in Inches `column E` | Gallons `column F` | Gallons Formula `column F` |
 | ---------------: | ------: | :------ |
@@ -57,8 +58,9 @@ should represent:
 |	41	|	274.2	| `=B$6-F2` |
 |	42	|	275.9	| `=B$6` |
 
-Those formulas refer to a few other values: `B2` is the diameter and `B8` is the radius of the tank.
-`B3` is the width of the tank. `B6` is the volume of the entire tank.
+Those formulas refer to a few other values: `B2` is the diameter and `B8` is the
+radius of the tank.  `B3` is the width of the tank.
+`B6` is the volume of the entire tank.
 
 Thanks
 ------
