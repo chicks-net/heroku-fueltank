@@ -105,7 +105,7 @@ Welcome to my Mojolicious experiment!
 <body>
 <H2>Heroku Fueltank</H2>
 <%= $message %>
-<br>
+<br>&nbsp;<br>
 <FORM method="GET" action="/guess">
 Inches: <input type="text" name="inches" value="0">
 <br> Your Name: <input type="text" name="your_name" value="you">
