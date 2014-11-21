@@ -10,15 +10,16 @@ sub foo {
 
 get '/' => sub {
 	my $self = shift;
-	$self->render(template => 'index', foo => foo(42) ) ;
+	$self->render(template => 'index', message => 'please log fuel tank level' ) ;
 };
 
 get '/guess' => sub {
 	my $self = shift;
 	my $inches = $self->param('inches');
 	my $your_name = $self->param('your_name');
-	my $foo = "thanks $your_name, you put in $inches";
-	$self->render(template => 'index', foo => $foo ) ;
+	my $when = $self->param('reading_date');
+	my $message = "thanks $your_name, you measured $inches on ";
+	$self->render(template => 'index', message => $message) ;
 };
 
 app->start;
@@ -36,14 +37,16 @@ Welcome to my Mojolicious experiment!
 	<title><%= title %></title>
 </head>
 <body>
+<H2>Heroku Fueltank</H2>
+<%= $message %>
+<br>
 <FORM method="GET" action="/guess">
 Inches: <input type="text" name="inches" value="0">
-Your Name: <input type="text" name="your_name" value="0">
-<br> <input type="submit" name="submit">
+<br> Your Name: <input type="text" name="your_name" value="you">
+<br> Date: <input type="text" name="reading_date" value="2014-11-00">
+<br> <input type="submit" name="submit" value ="Log Reading">
 </FORM>
 <br>
 <%= content %>
-<br>
-<%= $foo %>
 </body>
 </html>
