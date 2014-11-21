@@ -13,6 +13,14 @@ get '/' => sub {
 	$self->render(template => 'index', foo => foo(42) ) ;
 };
 
+get '/guess' => sub {
+	my $self = shift;
+	my $inches = $self->param('inches');
+	my $your_name = $self->param('your_name');
+	my $foo = "thanks $your_name, you put in $inches";
+	$self->render(template => 'index', foo => $foo ) ;
+};
+
 app->start;
 __DATA__
 
@@ -28,6 +36,12 @@ Welcome to my Mojolicious experiment!
 	<title><%= title %></title>
 </head>
 <body>
+<FORM method="GET" action="/guess">
+Inches: <input type="text" name="inches" value="0">
+Your Name: <input type="text" name="your_name" value="0">
+<br> <input
+</FORM>
+<br>
 <%= content %>
 <br>
 <%= $foo %>
