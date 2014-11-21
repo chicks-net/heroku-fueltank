@@ -10,7 +10,7 @@ sub foo {
 
 get '/' => sub {
 	my $self = shift;
-	$self->render(template => 'index', foo => foo(42) ;
+	$self->render(template => 'index', foo => foo(42) ) ;
 };
 
 app->start;
