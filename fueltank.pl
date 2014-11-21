@@ -29,6 +29,6 @@ Welcome to the Mojolicious real-time web framework!
 </head>
 <body>
 <%= content %>
-<%= foo %>
+<%= $foo %>
 </body>
 </html>
