@@ -66,6 +66,7 @@ sub inches_to_gallons {
 	# add fractional part
 	my $fractional_inches = $inches - $integer_inches;
 	my $delta = $tank_map->{$inches+1} - $tank_map->{$inches};
+	warn "$delta for $inches";
 	$gallons += $fractional_inches * $delta; # linear interpolation is close enough
 
 	$gallons = sprintf("%.1f", $gallons);
