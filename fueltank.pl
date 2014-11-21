@@ -60,8 +60,8 @@ sub inches_to_gallons {
 
 	# calculate integer part
 	my $integer_inches = int($inches);
-	die "out of range inches '$inches'" unless defined $tank_map->{$inches};
-	my $gallons = $tank_map->{$inches};
+	die "out of range inches '$inches'" unless defined $tank_map->{$integer_inches};
+	my $gallons = $tank_map->{$integer_inches};
 
 	# add fractional part
 	my $fractional_inches = $inches - $integer_inches;
