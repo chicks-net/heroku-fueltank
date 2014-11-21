@@ -83,7 +83,7 @@ get '/guess' => sub {
 	my $your_name = $self->param('your_name');
 	my $when = $self->param('reading_date');
 	my $gallons = inches_to_gallons($inches);
-	my $message = "thanks $your_name, you measured $inches on $when";
+	my $message = "thanks $your_name, you measured $inches\" or $gallons gallons on $when";
 	$self->render(template => 'index', message => $message) ;
 };
 
