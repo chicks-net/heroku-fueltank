@@ -9,8 +9,8 @@ sub foo {
 }
 
 get '/' => sub {
-  my $self = shift;
-  $self->render(template => 'index', foo => 'Howdy');
+	my $self = shift;
+	$self->render(template => 'index', foo => foo(42) ;
 };
 
 app->start;
@@ -18,8 +18,8 @@ __DATA__
 
 @@ index.html.ep
 % layout 'default';
-% title 'Welcome';
-Welcome to the Mojolicious real-time web framework!
+% title 'Heroku Fueltank';
+Welcome to my Mojolicious experiment!
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
@@ -29,6 +29,7 @@ Welcome to the Mojolicious real-time web framework!
 </head>
 <body>
 <%= content %>
+<br>
 <%= $foo %>
 </body>
 </html>
