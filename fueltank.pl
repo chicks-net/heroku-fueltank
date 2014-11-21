@@ -39,7 +39,7 @@ Welcome to my Mojolicious experiment!
 <FORM method="GET" action="/guess">
 Inches: <input type="text" name="inches" value="0">
 Your Name: <input type="text" name="your_name" value="0">
-<br> <input
+<br> <input type="submit" name="submit">
 </FORM>
 <br>
 <%= content %>
