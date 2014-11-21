@@ -12,8 +12,7 @@ Our fuel tank is 42" in diameter and 46" long, so a bit of googling and playing 
 I had a conversion chart for inches of of depth from the bottom into gallons of fuel that
 should represent:
 
-| Height in Inches | Gallons | gallons Formula |
-| column E | column F value | column F formula |
+| Height in Inches `column E` | Gallons `column F` | Gallons Formula `column F` |
 | ---------------: | ------: | :------ |
 |	1	|	1.7	| `=(B$3*(((B$8^2)*acos((B$8-E2)/B$8)-sqrt(2*B$8*E2-E2^2)*(B$8-E2)))/231)` |
 |	2	|	4.8	| `=(B$3*(((B$8^2)*acos((B$8-E3)/B$8)-sqrt(2*B$8*E3-E3^2)*(B$8-E3)))/231)` |
