@@ -18,7 +18,7 @@ bottom into gallons of fuel that should represent:
 
 | Height in Inches `column E` | Gallons `column F` | Gallons Formula `column F` |
 | ---------------: | ------: | :------ |
-|	1	|	1.7	| `=(B$3*(((B$8^2)*acos((B$8-E2)/B$8)-sqrt(2*B$8*E2-E2^2)*(B$8-E2)))/231)` |
+|	`cell E2` 1	|	1.7	| `=(B$3*(((B$8^2)*acos((B$8-E2)/B$8)-sqrt(2*B$8*E2-E2^2)*(B$8-E2)))/231)` |
 |	2	|	4.8	| `=(B$3*(((B$8^2)*acos((B$8-E3)/B$8)-sqrt(2*B$8*E3-E3^2)*(B$8-E3)))/231)` |
 |	3	|	8.7	| `=(B$3*(((B$8^2)*acos((B$8-E4)/B$8)-sqrt(2*B$8*E4-E4^2)*(B$8-E4)))/231)` |
 |	4	|	13.4	| `=(B$3*(((B$8^2)*acos((B$8-E5)/B$8)-sqrt(2*B$8*E5-E5^2)*(B$8-E5)))/231)` |
