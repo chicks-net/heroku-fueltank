@@ -4,6 +4,9 @@ Heroku Fueltank
 Heroku app to try [Mojolicious](http://mojolicio.us/) that takes fuel tank levels
 and guesses how long you will still have heat.
 
+Tank Calculations
+-----------------
+
 It is easy to figure out the filled volume of a cylinder on its end, but it is
 not easy to do with a cylinder on its side as is typical with most fuel tanks:
 
@@ -62,6 +65,13 @@ Those formulas refer to a few other values: `B2` is the diameter and `B8` is the
 radius of the tank.  `B3` is the width of the tank.
 `B6` is the volume of the entire tank.
 
+One of the things that helped make me confidant that the results were valid
+was graphing the difference in gallons between each inch of tank:
+
+![gallons delta per inch graph](gallons_delta.png)
+
+It makes a reassuring curve like the side of our tank.
+
 Thanks
 ------
 
@@ -69,3 +79,11 @@ Thanks
 that was informative enough for me to figure out the inches to gallons conversion in a spreadsheet.
 I know I could have done this with Calculus, but since I haven't needed that for 20 years why break
 my record?
+
+TODOs
+-----
+
+* fix `favicon.ico`
+* estimate how long fuel will last
+* track entries in database
+* graph entries from database
