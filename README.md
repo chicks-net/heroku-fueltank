@@ -10,7 +10,7 @@ Tank Calculations
 It is easy to figure out the filled volume of a cylinder on its end, but it is
 not easy to do with a cylinder on its side as is typical with most fuel tanks:
 
-![fueld tank](http://mangastart.com/blog/wp-content/uploads/cylinder2.jpg)
+![fuel tank](http://mangastart.com/blog/wp-content/uploads/cylinder2.jpg)
 
 Our fuel tank is 42" in diameter and 46" long, so after a bit of googling and
 playing with a spreadsheet I had a conversion chart for inches of depth from the
@@ -79,6 +79,7 @@ Thanks
 that was informative enough for me to figure out the inches to gallons conversion in a spreadsheet.
 I know I could have done this with Calculus, but since I haven't needed that for 20 years why break
 my record?
+* Thanks to the amazing driver at [Papco](http://www.papco.com/) for pointing to the fabulous [Westmor Industries tank calculator](http://westmor-ind.com/tank-calculator) which confirmed our previous calculations.
 
 TODOs
 -----
